@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ShapeProperties">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="573.0" prefWidth="119.0" style="-fx-background-color: DarkSlateGray;">
+         <children>
+            <Button fx:id="line" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMousePressed="#addShape" prefHeight="25.0" prefWidth="95.0" text="Line">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="rectangle" alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="15.0" mnemonicParsing="false" onMousePressed="#addShape" prefHeight="25.0" prefWidth="95.0" text="Rectangle">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="circle" alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="56.0" mnemonicParsing="false" onMousePressed="#addShape" prefHeight="25.0" prefWidth="95.0" text="Circle">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="ellipse" alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="117.0" mnemonicParsing="false" onMousePressed="#addShape" prefHeight="25.0" prefWidth="95.0" text="Ellipse">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Label prefHeight="28.0" prefWidth="38.0" text="Color" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ColorPicker fx:id="colorPicker" onMousePressed="#fillShapeColor" prefHeight="28.0" prefWidth="97.0" />
+            <Button fx:id="undoButton" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="366.0" mnemonicParsing="false" onMousePressed="#undo" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: Grey;" text="Undo">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="redoButton" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="366.0" mnemonicParsing="false" onMousePressed="#redo" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: Grey;" text="Redo">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="393.0" mnemonicParsing="false" onMousePressed="#deleteShape" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: Grey;" text="Delete">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="393.0" mnemonicParsing="false" onMousePressed="#editShape" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: Grey;" text="Edit">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="openButton" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="412.0" mnemonicParsing="false" onMousePressed="#openDrawings" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: DarkRed;" text="Open" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="458.0" mnemonicParsing="false" onMousePressed="#saveDrawings" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: DarkRed;" text="Save" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>      
+         </children>
+      </VBox>
+      <Pane fx:id="drawingPane" layoutX="120.0" prefHeight="573.0" prefWidth="674.0" />
+   </children>
+</Pane>
